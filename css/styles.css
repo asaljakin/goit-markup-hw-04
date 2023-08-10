@@ -1,0 +1,377 @@
+/* ============= VARIABLES ============= */
+:root {
+    --iris-color: #4D5AE5;
+    --navy-blue-color: #2E2F42;
+    --slate-color: #434455;
+    --white-color: #FFFFFF;
+    --cornflower-color: #E7E9FC;
+    --cloude-color: #F4F4FD;
+    --ocean-color: #404BBF;
+    --primary-font: 'Roboto',
+        sans-serif;
+    --secondary-font: 'Raleway',
+        sans-serif;
+    --main-font-size: 16px;
+    --hero-font-size: 56px;
+    --h2-font-size: 36px;
+    --h3-font-size: 20px;
+    --btn-font-size: 24px;
+    --logo-font-size: 18px;
+    --medium-font-weight: 500;
+    --logo-font-weight: 800;
+}
+/* ============= /VARIABLES ============= */
+
+/* ============= COMMON STYLES ============= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--primary-font);
+    font-size: var(--main-font-size);
+    font-weight: var(--medium-font-weight);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: var(--main-font-size);
+    color: var(--slate-color); 
+    background: var(--white-color);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.container {
+    max-width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--navy-blue-color);
+    font-size: var(--h2-font-size);
+    line-height: 1.11;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* ============= /COMMON STYLES ============= */
+
+/* ============= PAGE HEADER ============= */
+.page-header {
+    border-bottom: 1px solid var(--cornflower-color);
+}
+
+.page-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 452px;
+    justify-content: space-between;
+}
+
+.header-nav a {
+    display: block;
+}
+
+.logotype {
+    color: var(--iris-color);
+    font-family: var(--secondary-font);
+    font-size: var(--logo-font-size);
+    font-weight: var(--logo-font-weight);
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-right: 76px;
+}
+
+.header-logo-color{
+    color: var(--navy-blue-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.nav-menu-link {
+    /* display: block; */
+    color: var(--navy-blue-color);
+    font-weight: var(--medium-font-weight);
+}
+
+.contacts {
+    font-style: normal;
+}
+
+.contacts-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+}
+
+.nav-menu-link:hover,
+.nav-menu-link:focus,
+.contacts-link:hover,
+.contacts-link:focus {
+    color: var(--ocean-color);
+}
+/* ============= /PAGE HEADER ============= */
+
+/* ============= PAGE HERO ============= */
+.hero {
+    /* padding: 188px 472px 48px; */
+    background: var(--navy-blue-color);
+    padding-top: 188px;
+    padding-bottom: 188px;
+    margin-bottom: 60px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    align-items: center;
+}
+
+.hero-title {
+    max-width: 496px;
+    text-align: center;
+    color: var(--white-color);
+    font-size: var(--hero-font-size);
+    line-height: 1.07;
+    
+}
+
+.hero-btn {
+    display: block;
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    background: var(--iris-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background: var(--ocean-color);
+}
+/* ============= /PAGE HERO ============= */
+
+/* ============= PAGE BENEFITS ============= */
+.benefits {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.benefits-list {
+    display: flex;
+    gap: 24px;
+}
+
+.benefits-list-item{
+    flex-basis: calc((100% - 72px) / 4);
+}
+
+.benefits-list-title {
+    color: var(--navy-blue-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--medium-font-weight);
+    line-height: 1.2;
+    margin-bottom: 8px;
+ }
+/* ============= /PAGE BENEFITS ============= */
+
+/* ============= PAGE WHAT DOING ============= */
+.what-doing {
+    padding-bottom: 120px;
+}
+
+.what-doing-list {
+    display: flex;
+    gap: 24px;   
+}
+
+.what-doing-list-item {
+    flex-basis: calc((100% - 2 * 24) / 3);
+}
+/* ============= /PAGE WHAT DOING ============= */
+
+/* ============= PAGE OUR TEAM ============= */
+.our-team {
+    background-color: var(--cloude-color);
+    padding: 120px 0;
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+
+.team-list-item {
+    background-color: var(--white-color);
+    flex-basis: calc((100% - 3* 24) / 4);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.member-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+}
+
+.team-main-title {
+    text-align: center;
+    color: var(--navy-blue-color);
+    font-size: var(--h2-font-size);
+    line-height: 1.11;
+    text-transform: capitalize;
+}
+
+.team-member-name {
+    color: var(--navy-blue-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--medium-font-weight);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.team-position {
+    text-align: center;
+}
+/* ============= /PAGE OUR TEAM ============= */
+
+/* ============= PAGE FOOTER ============= */
+.page-footer {
+    background: var(--navy-blue-color);
+    color: var(--cloude-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-logo-color {
+    color: var(--cloude-color);
+}
+
+.footer-text{
+    width: 264px;
+}
+/* ============= /PAGE FOOTER ============= */
+
+/* ============= PORTFOLIO FILTERS ============= */
+.portfolio-cards {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.filters-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+.filters-btn {
+    background: var(--cloude-color);
+    color: var(--iris-color);
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid var(--cornflower-color);
+
+}
+
+.filters-btn:hover,
+.filters-btn:focus {
+    background: var(--ocean-color);
+    color: var(--white-color);
+    border: 1px solid transparent;
+}
+/* ============= /PORTFOLIO FILTERS ============= */
+
+/* ============= PORTFOLIO PROJECT CARDS ============= */
+.project-cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 2 * 24px) / 3);
+    gap: 48px 24px; 
+}
+
+.project-cards-conteiner {
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower-color);
+    border-top: none;
+}
+
+.project-cards-title{
+    color: var(--navy-blue-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--medium-font-weight);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+/* ============= /PORTFOLIO PROJECT CARDS ============= */
