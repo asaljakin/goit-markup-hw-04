@@ -159,11 +159,11 @@ body {
     transition: color var(--transition-dur-and-func);
 }
 
-.current-page {
+.current {
     position: relative;
 }
 
-.current-page::after {
+.current::after {
     position: absolute;
     display: block;
     letter-spacing: 0;
