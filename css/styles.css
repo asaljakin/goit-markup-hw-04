@@ -378,7 +378,7 @@ body {
 }
 
 .team-social-icon {
-    fill: var(--white-color);
+    fill: var(--cloude-color);
 }
 
 /* ============= /PAGE OUR TEAM ============= */
@@ -591,17 +591,17 @@ body {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 2px 1px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: background-color var(--transition-dur-and-func),
-                color var(--transition-dur-and-func),
-                box-shadow var(--transition-dur-and-func),
-                border var(--transition-dur-and-func);
+    transition: color var(--transition-dur-and-func),
+                background-color var(--transition-dur-and-func),
+                border-color var(--transition-dur-and-func)
+                box-shadow var(--transition-dur-and-func);
 }
 
 .filters-btn:hover,
 .filters-btn:focus {
-    background-color: var(--ocean-color);
     color: var(--white-color);
-    border: 1px solid transparent;
+    background-color: var(--ocean-color);
+    border-color: var(--cloude-color);;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
             0px 2px 1px rgba(0, 0, 0, 0.08),
             0px 2px 2px rgba(0, 0, 0, 0.12);
