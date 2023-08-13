@@ -11,6 +11,7 @@
     --dairy-color: #FCFCFC;
     --green-color: #31D0AA;
     --navyblue-modal: rgba(46, 47, 66, 0.40);
+    --light-slate: #8E8F99;
     --primary-font: 'Roboto',
         sans-serif;
     --secondary-font: 'Raleway',
@@ -111,6 +112,7 @@ body {
 /* ============= PAGE HEADER ============= */
 .page-header {
     border-bottom: 1px solid var(--cornflower-color);
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -128,7 +130,9 @@ body {
 }
 
 .header-nav a {
-    display: block;
+    display: flex;
+    height: 72px;
+    align-items: center;
 }
 
 .logotype {
@@ -149,8 +153,10 @@ body {
 .nav-menu {
     display: flex;
     gap: 40px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
 }
 
 .nav-menu-link {
@@ -161,18 +167,20 @@ body {
 
 .current {
     position: relative;
+    color: var(--ocean-color);
 }
 
 .current::after {
     position: absolute;
     display: block;
-    letter-spacing: 0;
+    /* letter-spacing: 0; */
     content: '';
     width: 100%;
     height: 4px;
     background-color: var(--ocean-color);
     border-radius: 2px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    bottom: -1px;
 }
 
 .contacts {
@@ -200,9 +208,12 @@ body {
 
 /* ============= PAGE HERO ============= */
 .hero {
+    max-width: 1440px;
     background-color: var(--navy-blue-color);
     background-image: linear-gradient(var(--grey-color),var(--grey-color)), url("../images/hero.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 188px;
     padding-bottom: 188px;
     margin-bottom: 60px;
@@ -308,6 +319,7 @@ body {
     background-color: var(--white-color);
     flex-basis: calc((100% - 3* 24) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .member-container {
@@ -339,17 +351,22 @@ body {
 
 .team-social-list {
     display: flex;
-    /* flex-direction: row; */
+    justify-content: center;
     gap: 24px;
     padding: 8px 16px 0px;
+}
+
+.team-social-item {
+    width: 40px;
+    height: 40px;
 }
 
 .team-social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--iris-color);
     transition: background-color var(--transition-dur-and-func);
@@ -376,24 +393,32 @@ body {
     gap: 24px;
 }
 
-.customers-container {
+.customers-item {
+    width: 168px;
+    height: 88px;
+
+}
+
+.customers-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 168px;
-    height: 88px;
+    width: 100%;
+    height: 100%;
     border-radius: 4px;
-    border: 1px solid #8E8F99;
-    transition: border-color var(--transition-dur-and-func);
+    border: 1px solid var(--light-slate);
+    color: var(--light-slate);
+    transition: border-color var(--transition-dur-and-func), color var(--transition-dur-and-func);
 }
 
-.customers-container:hover,
-.customers-container:focus {
+.customers-link:hover,
+.customers-link:focus {
     border-color: var(--ocean-color);
+    color: var(--ocean-color);
 }
 
 .customers-logo {
-    fill: #8E8F99;
+    fill: currentColor;
     transition: fill var(--transition-dur-and-func);
 }
 
@@ -435,13 +460,15 @@ body {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-social-title {
     font-size: 16px;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
     margin-bottom: 16px;
 }
 
@@ -450,12 +477,17 @@ body {
     gap: 16px;
 }
 
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+}
+
 .footer-social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--iris-color);
     transition: background-color var(--transition-dur-and-func);
@@ -467,7 +499,7 @@ body {
 }
 
 .footer-social-icon {
-    fill: var(--white-color);
+    fill: var(--cloude-color);
 }
 /* ============= /PAGE FOOTER ============= */
 
@@ -487,14 +519,15 @@ body {
 /* ============= PAGE MODAL ============= */
 .modal {
     position: absolute;
-    top: 80px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);    
+    transform: translate(-50%, -50%) scale(1);
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     border-radius: 4px;
     background: var(--dairy-color);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    transition: transform var(--transition-dur-and-func);
 }
 
 .close-btn {
@@ -507,14 +540,16 @@ body {
     background-color: var(--cornflower-color); 
     width: 24px;
     height: 24px;
+    padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 50%;
-    transition: background-color var(--transition-dur-and-func);
+    transition: background-color var(--transition-dur-and-func), border var(--transition-dur-and-func);
 }
 
 .close-btn:hover,
 .close-btn:focus {
     background-color: var(--ocean-color);
+    border: none;
 }
 
 .close-btn-icon {
@@ -553,10 +588,13 @@ body {
     padding: 12px 24px;
     border-radius: 4px;
     border: 1px solid var(--cornflower-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
     transition: background-color var(--transition-dur-and-func),
                 color var(--transition-dur-and-func),
+                box-shadow var(--transition-dur-and-func),
                 border var(--transition-dur-and-func);
-
 }
 
 .filters-btn:hover,
@@ -564,6 +602,9 @@ body {
     background-color: var(--ocean-color);
     color: var(--white-color);
     border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 2px 1px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ============= /PORTFOLIO FILTERS ============= */
@@ -574,6 +615,18 @@ body {
     flex-wrap: wrap;
     flex-basis: calc((100% - 2 * 24px) / 3);
     gap: 48px 24px; 
+}
+
+.project-cards-link {
+    display: block;
+    transition: box-shadow var(--transition-dur-and-func);
+}
+
+.project-cards-link:hover,
+.project-cards-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .project-cards-conteiner {
@@ -616,9 +669,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--iris-color);
+    color: var(--cloude-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding: 40px 32px 164px;
+    padding: 40px 32px;
     transform: translateY(100%);
     transition: transform var(--transition-dur-and-func);
 
